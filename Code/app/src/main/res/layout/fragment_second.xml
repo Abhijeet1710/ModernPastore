@@ -4,46 +4,111 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.SecondFragment"
-    android:background="?attr/colorOnPrimarySurface">
+    android:background="?attr/colorOnPrimarySurface"
+    tools:context=".view.fragments.SecondFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginHorizontal="28dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="24dp"
         android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.714"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/Widget.MaterialComponents.TextInputLayout.FilledBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etTitle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Site Name"
+                android:maxLines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/Widget.MaterialComponents.TextInputLayout.FilledBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:hint="Password"
+                android:maxLines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/Widget.MaterialComponents.TextInputLayout.FilledBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etRePassword"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:hint="Rewrite Password"
+                android:maxLines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAddAccount"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:background="?attr/colorOnSecondary"
+            android:elevation="10dp"
+            android:text="Add"
+            android:textAllCaps="false"
+            android:textColor="?attr/colorOnPrimary" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clDoneBack"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#CDDC39"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <EditText
-            android:id="@+id/etTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Site Name" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <EditText
-            android:id="@+id/etPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:hint="Password" />
+    <ImageView
+        android:id="@+id/ivDone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_done"
+        android:visibility="gone"
+        tools:layout_editor_absoluteX="156dp"
+        tools:layout_editor_absoluteY="316dp" />
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnAddAccount"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:text="Add"
-            android:textAllCaps="false" />
-
-    </LinearLayout>
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="40dp"
+        android:text="Add a Accont"
+        android:textColor="?attr/colorOnSecondary"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

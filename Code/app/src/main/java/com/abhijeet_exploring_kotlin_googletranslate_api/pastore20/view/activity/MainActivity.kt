@@ -1,4 +1,4 @@
-package com.abhijeet_exploring_kotlin_googletranslate_api.pastore20.view
+package com.abhijeet_exploring_kotlin_googletranslate_api.pastore20.view.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -12,13 +12,10 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
-
-        if(AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) setTheme(R.style.Theme_Pastore20)
-
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
-        val view = binding.root
-        setContentView(view)
+        setContentView(binding.root)
+        if(AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) setTheme(R.style.Theme_Pastore20)
 
         binding.btnBulb.setOnClickListener {
             changeTheme()
@@ -35,4 +32,6 @@ class MainActivity : AppCompatActivity() {
             Common.MODE = "LIGHT";
         }
     }
+
+
 }
