@@ -11,5 +11,12 @@ class AccountRepository(private val accountDao: AccountDao) {
     suspend fun addAccount(oneAccount: OneAccount){
         accountDao.addAccount(oneAccount)
     }
+    suspend fun updateAccount(oneAccount: OneAccount){
+        accountDao.updateAccount(oneAccount)
+    }
+    suspend fun deleteAccount(oneAccount: OneAccount){
+        accountDao.deleteAccount(oneAccount)
+    }
+//    fun getAccount(id : Int) : OneAccount = accountDao.getAccount(id)
 
 }

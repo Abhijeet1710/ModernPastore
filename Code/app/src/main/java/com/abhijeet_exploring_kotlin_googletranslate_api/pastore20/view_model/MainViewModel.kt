@@ -26,6 +26,21 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             accountRepository.addAccount(oneAccount)
         }
     }
+//    fun getAccount(id : Int) : OneAccount{
+////        viewModelScope.launch {
+//            return accountRepository.getAccount(id)
+////        }
+//    }
+    fun updateAccount(oneAccount: OneAccount){
+        viewModelScope.launch {
+            accountRepository.updateAccount(oneAccount)
+        }
+    }
+    fun deleteAccount(oneAccount: OneAccount){
+        viewModelScope.launch {
+            accountRepository.deleteAccount(oneAccount)
+        }
+    }
 
 
 

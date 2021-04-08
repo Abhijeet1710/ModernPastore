@@ -9,9 +9,10 @@ data class OneAccount(
 
         @PrimaryKey(autoGenerate = true) val id : Int = 0,
         val siteName : String,
-        val siteUrl : String = "Default URL",
-        val siteIcon : String ="Default Image",
-        val sitePassword : String
+        val siteUrl : String? = null,
+        val siteIcon : String? = null,
+        val sitePassword : String,
+        val siteDescription : String? = null
 
 
 )

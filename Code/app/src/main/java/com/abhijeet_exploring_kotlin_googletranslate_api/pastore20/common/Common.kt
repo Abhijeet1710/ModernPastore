@@ -12,4 +12,10 @@ class Common {
         Toast.makeText(context, msg, Toast.LENGTH_LONG).show()
     }
 
+    fun validateIp(title: String, password: String, rePassword: String) : Boolean {
+        if(title.isNotEmpty() && password.isNotEmpty() && password == rePassword)
+            return true
+        return false
+    }
+
 }
